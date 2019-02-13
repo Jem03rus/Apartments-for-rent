@@ -5,7 +5,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Windows.Controls;
 
-namespace DataBaseLibrary
+namespace ApartamentsForRent
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

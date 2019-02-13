@@ -5,7 +5,7 @@ using System.Windows;
 using System.Windows.Controls;
 
 
-namespace DataBaseLibrary
+namespace ApartamentsForRent
 {
     /// <summary>
     /// Логика взаимодействия для AcceptBookWindow.xaml

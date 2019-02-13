@@ -1,15 +1,15 @@
-﻿<Window x:Class="DataBaseLibrary.MainWindow"
+﻿<Window x:Class="ApartamentsForRent.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:DataBaseLibrary"
+        xmlns:local="clr-namespace:ApartamentsForRent"
         mc:Ignorable="d"
          Title="Library" Height="500" Width="800" Loaded="Window_Loaded" ResizeMode="NoResize">
 
     <Grid >
 
-        <Grid Name="IssueBookTable" Visibility="Visible">
+        <Grid Name="IssueBookTable" Visibility="Hidden">
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
                 <RowDefinition Height="350"/>
@@ -24,19 +24,18 @@
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="1" Content="Table - Issue of book" FontSize="25" FontFamily="Yu Gothic UI Semibold" HorizontalAlignment="Left" Width="250" />
+            <Label Grid.Row="0" Grid.Column="1" Content="База данных - Сдача квартир" FontSize="25" FontFamily="Yu Gothic UI Semibold" HorizontalAlignment="Left" Width="350" />
             <DataGrid Name="IssueOfBookDataGrid" Grid.Row="1" Grid.Column="1" AutoGenerateColumns="True" IsReadOnly="True">
             </DataGrid>
 
-            <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Width="100" Height="35" Content="Add book" FontSize="16" Click="AddBook_Click" />
+            <Button Grid.Row="0" Grid.Column="1" HorizontalAlignment="Right" Width="170" Height="35" Content="Добавление квартиры" FontSize="16" Click="AddBook_Click" />
 
-            <Button Name="IssueButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="100" Height="35" Content="Issue Book" FontSize="16" Click="IssueBookMenu_Click" />
-            <Button Name="AcceptButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="100" Height="35" Margin="120,0,0,0" Content="Accept Book" FontSize="16" Click="AcceptBookButton_Click" />
+            <Button Name="IssueButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="150" Height="35" Content="Сдача квартиры" FontSize="16" Click="IssueBookMenu_Click" />
+            <Button Name="AcceptButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Left" Width="150" Height="35" Margin="170,0,0,0" Content="Завершение сделки" FontSize="16" Click="AcceptBookButton_Click" />
             <Button Name="AddReaderButton" Grid.Row="2" Grid.Column="1" HorizontalAlignment="Right" Width="100" Height="35" Content="Add reader" FontSize="16" Click="AddReaderButton_Click" />
-            <Label Name="BookIssuedLabel" Grid.Row="2" Grid.Column="1" Content="Books issued: " HorizontalAlignment="Left" FontSize="16" Width="120" Height="35" Margin="230,5,0,0" />
 
         </Grid>
-        <Grid Name="IssueBook" Visibility="Hidden" >
+        <Grid Name="IssueBook" Visibility="Visible" >
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="50" />
@@ -47,19 +46,19 @@
 
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="10"/>
-                <ColumnDefinition Width="230"/>
+                <ColumnDefinition Width="430"/>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="10"/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="1" Content="Issue Book" FontSize="40" FontFamily="Britannic Bold" Foreground="Black" BorderBrush="White" HorizontalAlignment="Left" />
+            <Label Content="Сдача квартиры" FontSize="40" FontFamily="Britannic Bold" Foreground="Black" BorderBrush="White" HorizontalAlignment="Left" Grid.ColumnSpan="3" Width="330" />
             <Border  Grid.Row="1" Grid.Column="1" BorderBrush="Black" BorderThickness="1" Margin="0,0,10,0"/>
             <Border  Grid.Row="1" Grid.Column="2" BorderBrush="Black" BorderThickness="1" Margin="10,0,0,0" />
 
-            <WrapPanel Grid.Row="1" Grid.Column="1" >
-                <Label HorizontalAlignment="Left" Content="Issue information" FontSize="25" Margin="10,0,0,0"/>
+            <StackPanel Grid.Row="1" Grid.Column="1" >
+                <Label HorizontalAlignment="Center" Content="Информация о сдаче" FontSize="25" Margin="10,0,0,0"/>
 
-                <Label HorizontalAlignment="Left" Content="Name" FontSize="20"/>
+                <Label HorizontalAlignment="Left" Content="ФИО" FontSize="20"/>
                 <ComboBox Name="ReaderNameComboBox" HorizontalAlignment="Left" Width="195" Height="25" Margin="7,0,0,0" />
 
                 <Label HorizontalAlignment="Left" Content="Date of issue" FontSize="20"/>
@@ -72,10 +71,10 @@
                 <ComboBox Name="BookComboBox" HorizontalAlignment="Left" Width="195" Height="25" Margin="7,0,0,0"/>
 
                 <Button HorizontalAlignment="Left" Width="195" Height="30" Margin="7,20,0,0" Background="White" FontSize="22"  Content="Save" Click="SaveIssueBook_Click" />
-            </WrapPanel>
+            </StackPanel>
 
             <DataGrid Grid.Row="1" Grid.Column="2" Name="IssueBookDataGrid"/>
-            <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Width="100" Height="35" Content="Back" FontSize="16" Click="IssueBookBackButton_Click" />
+            <Button Grid.Row="0" Grid.Column="2" HorizontalAlignment="Right" Width="100" Height="35" Content="Назад" FontSize="16" Click="IssueBookBackButton_Click" />
         </Grid>
         <Grid Name="AddBook" Visibility="Hidden">
 

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28307.106
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataBaseLibrary", "DataBaseLibrary\DataBaseLibrary.csproj", "{BB47E24F-2CE3-4725-8F30-0D19E932D592}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApartamentsForRent", "DataBaseLibrary\ApartamentsForRent.csproj", "{BB47E24F-2CE3-4725-8F30-0D19E932D592}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
